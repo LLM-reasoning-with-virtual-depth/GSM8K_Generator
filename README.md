@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ### Usage
 Run the generator with default settings:
 ```bash
-python example_iGSM.py
+python GSM8Kgenerator.py
 ```
 
 ### Key Parameters
@@ -55,7 +55,7 @@ Available topics:
 ### Output Structure
 Directory Structure
 ```
-./GSM8K_GENERATOR/output/gsm8k_extended/
+GSM8K_GENERATOR/output/gsm8k_extended/
 ├── train.json
 └── inference.json
 ```
