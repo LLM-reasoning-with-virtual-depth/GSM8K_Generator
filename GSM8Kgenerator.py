@@ -132,7 +132,11 @@ class GSM8KDatasetCreator:
         for split_name, (problems, filename) in splits.items():
             output_path = os.path.join(self.output_dir, filename)
             with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(problems, f, indent=2, ensure_ascii=False)
+                # Write each problem as a single line
+                for problem in problems:
+                    json_str = json.dumps(problem, ensure_ascii=False)
+                    f.write(json_str + '\n')
+
 
 def main():
     # Set random seeds for reproducibility
